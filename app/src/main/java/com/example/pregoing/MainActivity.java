@@ -35,32 +35,30 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        FragmentTransaction transaction = fragmentManager.beginTransaction();
-        transaction.replace(R.id.frameLayout, fragmentHome).commitAllowingStateLoss();
-        BottomNavigationView bottomNavigationView = findViewById(R.id.navigationView);
-    }
-    class ItemSelectedListener implements BottomNavigationView.OnNavigationItemSelectedListener{
-        @Override
-        public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-            FragmentTransaction transaction = fragmentManager.beginTransaction();
+        bottomNavigationView = findViewById(R.id.navigationView);
 
-            switch(menuItem.getItemId())
-            {
-                case R.id.navigationHome:
-                    transaction.replace(R.id.frameLayout, fragmentHome).commitAllowingStateLoss();
+        //처음화면
+        getSupportFragmentManager().beginTransaction().add(R.id.frameLayout, new FragmentHome()).commit();
+        // FrameLayout에 fragment.xml 띄우기
+        // 바텀 네비게이션뷰 안의 아이템 설정
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @SuppressLint("NonConstantResourceId")
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                switch (menuItem.getItemId()) {
+                    //item을 클릭시 id값을 가져와 FrameLayout에 fragment.xml띄우기
+                    case R.id.navigationHome: getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, new FragmentHome()).commit();
+                        break;
+                    case R.id.navigationSearch: getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, new FragmentSearch()).commit();
+                        break;
+                    case R.id.navigationStar: getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, new FragmentStar()).commit();
+                        break;
+                    case R.id.navigationProfile: getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, new FragmentProfile()).commit();
+                        break;
 
-                    break;
-                case R.id.navigationSearch:
-                    transaction.replace(R.id.frameLayout, fragmentSearch).commitAllowingStateLoss();
-                    break;
-                case R.id.navigationStar:
-                    transaction.replace(R.id.frameLayout, fragmentStar).commitAllowingStateLoss();
-                    break;
-                case R.id.navigationProfile:
-                    transaction.replace(R.id.frameLayout, fragmentProfile).commitAllowingStateLoss();
-                    break;
+                }
+                return true;
             }
-            return true;
-        }
+        });
     }
 }
