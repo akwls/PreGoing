@@ -5,10 +5,22 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.annotation.SuppressLint;
+import android.content.Context;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.content.pm.Signature;
 import android.os.Bundle;
+import android.util.Base64;
+import android.util.Log;
 import android.view.MenuItem;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+
+import static com.kakao.util.maps.helper.Utility.getPackageInfo;
 
 public class MainActivity extends AppCompatActivity {
     private FragmentManager fragmentManager = getSupportFragmentManager();
@@ -16,6 +28,8 @@ public class MainActivity extends AppCompatActivity {
     private FragmentSearch fragmentSearch = new FragmentSearch();
     private FragmentStar fragmentStar = new FragmentStar();
     private FragmentProfile fragmentProfile = new FragmentProfile();
+
+    BottomNavigationView bottomNavigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

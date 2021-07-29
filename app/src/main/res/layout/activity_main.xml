@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -16,14 +17,19 @@
         app:layout_constraintTop_toTopOf="parent">
 
     </FrameLayout>
-    <android.support.design.widget.BottomNavigationView
+    <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/navigationView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?android:attr/windowBackground"
+        android:background="#989FAC"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:itemIconTint="@drawable/menu_selector_color"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="parent"
+        app:labelVisibilityMode="unlabeled"
         app:menu="@menu/menu_bottomnavigationview" />
 
+<!--
+labelVisibilityMode : 타이틀 업애기
+-->
 </androidx.constraintlayout.widget.ConstraintLayout>
