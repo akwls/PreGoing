@@ -5,17 +5,53 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <EditText
-        android:id="@+id/label"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:gravity="left|center_vertical"
-        android:paddingLeft="5dp"
-        android:textColor="#000000"
-        android:textSize="20dp"/>
+        android:background="#99A0AD"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_gravity="center"
+            android:background="@android:color/transparent"
+            android:src="@drawable/outline_menu_white_24"
+            />
+
+        <EditText
+            android:id="@+id/label"
+            android:layout_width="294dp"
+            android:layout_height="30dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="5dp"
+            android:textColor="#000000"
+            android:backgroundTint="#fff"
+            android:background="#fff"
+            android:textSize="20dp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"          />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_gravity="center"
+            android:background="@android:color/transparent"
+            android:src="@drawable/outline_search_white_24"          />
+
+    </LinearLayout>
 
 
     <View
+        android:layout_marginTop="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginBottom="-10dp"
@@ -90,13 +126,13 @@
         android:layout_height="1dp" />
 
     <View
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="-10dp"
-        android:background="#B7B7B7"
         android:layout_width="match_parent"
-        android:layout_height="1dp" />
+        android:layout_height="1dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="-10dp"
+        android:background="#B7B7B7" />
 
     <LinearLayout
         android:layout_margin="20dp"
