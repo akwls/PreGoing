@@ -20,6 +20,15 @@ android {
 }
 
 dependencies {
+
+    // 카카오맵
+    implementation files('libs/libDaumMapAndroid.jar')
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+
+    //bottom navigation view
+    implementation 'com.android.support:design:29.0.0'
+    implementation 'com.google.android.material:material:1.2.0'
+
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'androidx.appcompat:appcompat:1.0.2'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
