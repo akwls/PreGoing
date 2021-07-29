@@ -13,6 +13,9 @@ import net.daum.mf.map.api.MapPoint;
 import net.daum.mf.map.api.MapView;
 
 public class FragmentHome extends Fragment {
+    public static FragmentHome newInstance() {
+        return new FragmentHome();
+    }
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
