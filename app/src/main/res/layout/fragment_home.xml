@@ -18,6 +18,7 @@
             android:layout_height="wrap_content">
 
             <ImageButton
+                android:id="@+id/three_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
@@ -56,11 +57,81 @@
                 android:background="@android:color/transparent"
                 android:src="@drawable/outline_search_white_24"          />
 
+
         </LinearLayout>
+
         <RelativeLayout
             android:id="@+id/map_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
+        </LinearLayout>
+
+
+    <LinearLayout
+        android:paddingTop="30dp"
+        android:visibility="invisible"
+
+        android:id="@+id/pre_place"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="50dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#fff">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="스케줄합정"
+                android:textSize="15dp"
+                android:layout_margin="5dp"
+                android:textColor="#000"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="거리 : 2km"
+                android:textSize="12dp"
+                android:layout_margin="5dp"
+                android:textColor="#000"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="방문자 수 : 23"
+                android:textSize="12dp"
+                android:layout_margin="5dp"
+                android:textColor="@color/black"
+                />
+
+            <Button
+                android:id="@+id/first_btn"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:text="확정"
+                android:textSize="15dp"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/colorDecide"
+                android:layout_margin="5dp"/>
+        </LinearLayout>
+    </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/black"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"/>
+
 
     </LinearLayout>
 
