@@ -1,9 +1,12 @@
 package com.example.pregoing;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageButton;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -27,6 +30,16 @@ public class FragmentHome extends Fragment {
 
         // 중심점 변경 + 줌 레벨 변경
         mapView.setMapCenterPointAndZoomLevel(MapPoint.mapPointWithGeoCoord(37.55759443948931, 126.92446076240746), 1, true);
+
+        ImageButton searchBtn = (ImageButton) v.findViewById(R.id.search_btn);
+
+        searchBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ((MainActivity)getActivity()).replaceFragment(FragmentSearch.newInstance());
+            }
+        });
+
 
         return v;
     }
