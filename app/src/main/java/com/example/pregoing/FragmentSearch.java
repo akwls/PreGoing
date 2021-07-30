@@ -12,7 +12,9 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 public class FragmentSearch extends Fragment {
-
+    public static FragmentSearch newInstance() {
+        return new FragmentSearch();
+    }
     public static final int sub = 1001;
     @Nullable
     @Override

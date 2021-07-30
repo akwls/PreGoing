@@ -59,7 +59,7 @@ public class FragmentProfile extends Fragment {
                 String pwCheck = preferences.getString(strid, "");
                 if(strpw.equals(pwCheck)) {
                     strCheck = "로그인 성공";
-                    ((MainActivity)getActivity()).replaceFragment(FragmentHome.newInstance());
+                    ((MainActivity)getActivity()).replaceFragment(FragmentSearch.newInstance());
                 }
                 else {
                     strCheck = "로그인 실패";

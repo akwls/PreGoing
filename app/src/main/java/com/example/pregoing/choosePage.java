@@ -14,7 +14,7 @@ import net.daum.mf.map.api.MapView;
 
 public class choosePage extends AppCompatActivity {
 
-    public static final int sub = 1001;
+    public static final int sub = 1002;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
